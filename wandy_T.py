@@ -4,6 +4,8 @@ from discord import Embed, ButtonStyle
 from discord.ui import View, Button
 import math
 import os
+from keep_alive import keep_alive
+keep_alive()
 
 items = {
     "Product 1": 10,
