@@ -143,6 +143,11 @@ async def help(ctx):
     embed.add_field(name="!show", value="- Show items available to purchase", inline=False)
     embed.add_field(name="!help", value="- Show this help message", inline=False)
     await ctx.send(embed=embed)
+ 
+def token_get(file_path):
+    with open(file_path, 'r') as f:
+        first_line = f.readline()
+    return first_line
 
-bot.run(os.getenv("DISCORD_TOKEN"))
+bot.run(token_get("token.txt"))
 
